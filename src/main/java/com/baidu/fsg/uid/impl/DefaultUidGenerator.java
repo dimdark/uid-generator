@@ -135,6 +135,7 @@ public class DefaultUidGenerator implements UidGenerator, InitializingBean {
     protected synchronized long nextId() {
         long currentSecond = getCurrentSecond();
 
+        // todo wjh 注意这段代码
         // Clock moved backwards, refuse to generate uid
         if (currentSecond < lastSecond) {
             long refusedSeconds = lastSecond - currentSecond;

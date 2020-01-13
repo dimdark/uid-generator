@@ -140,7 +140,8 @@ public class CachedUidGenerator extends DefaultUidGenerator implements Disposabl
         if (rejectedTakeBufferHandler != null) {
             this.ringBuffer.setRejectedTakeHandler(rejectedTakeBufferHandler);
         }
-        
+
+        // 提前将uid填满slots
         // fill in all slots of the RingBuffer
         bufferPaddingExecutor.paddingBuffer();
         

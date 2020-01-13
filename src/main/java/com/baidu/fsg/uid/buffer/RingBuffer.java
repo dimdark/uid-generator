@@ -161,6 +161,7 @@ public class RingBuffer {
         if (currentTail - nextCursor < paddingThreshold) {
             LOGGER.info("Reach the padding threshold:{}. tail:{}, cursor:{}, rest:{}", paddingThreshold, currentTail,
                     nextCursor, currentTail - nextCursor);
+            // 异步增加uid
             bufferPaddingExecutor.asyncPadding();
         }
 

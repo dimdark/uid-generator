@@ -26,7 +26,8 @@ import com.baidu.fsg.uid.impl.DefaultUidGenerator;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:uid/default-uid-spring.xml" })
 public class DefaultUidGeneratorTest {
-    private static final int SIZE = 100000; // 10w
+    // private static final int SIZE = 100000; // 10w
+    private static final int SIZE = 100;
     private static final boolean VERBOSE = true;
     private static final int THREADS = Runtime.getRuntime().availableProcessors() << 1;
 
